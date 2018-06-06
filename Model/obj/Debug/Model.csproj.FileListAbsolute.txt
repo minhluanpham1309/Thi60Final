@@ -1,0 +1,12 @@
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\bin\Debug\Model.dll.config
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\bin\Debug\Model.dll
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\bin\Debug\Model.pdb
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\bin\Debug\EntityFramework.dll
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\bin\Debug\EntityFramework.xml
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\obj\Debug\Model.dll
+D:\Hoc\LapTrinhWeb\Thi60Final\Model\obj\Debug\Model.pdb

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Model.EF.Cat>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="background-color: blue; text-align: center; height: 70px; padding-top: 5px;">
+	QUẢN LÝ DANH MỤC SẢN PHẨM
+</div>
+<div class="row" style="background-color: blue; text-align: center;">
+	<div class="col-md-1">Mã DM</div>
+	<div class="col-md-2">Tên DM</div>
+	<div class="col-md-4">Mô Tả DM</div>
+	<div class="col-md-2">Tình Trạng</div>
+	<div class="col-md-1">Chi Tiết</div>
+</div>
+@foreach (var item in Model)
+{
+	<div class="row" style= "text-align: center;">
+		<div class="col-md-1">@item.CatID</div>
+		<div class="col-md-2">@item.CatName</div>
+		<div class="col-md-4">@item.CatDes</div>
+		<div class="col-md-2">
+			@{ if (item.Status == 1)
+				{
+					<img src="~/Image/icons8-lock-32.png" />;
+				}
+				else
+				{
+					<img src="~/Image/icons8-unlock-32.png" />;
+				}
+			}
+		</div>
+		<div class="col-md-1">
+			<a href="@Url.Action("Detail", "Home", new { id = item.CatID})"><img src="~/Image/icons8-pencil-32.png" /></a>
+			
+		</div>
+		</div>
+}

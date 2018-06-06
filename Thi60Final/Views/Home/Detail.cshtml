@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Model.EF.Pro>
+
+@{
+	ViewBag.Title = "Detail";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="background-color: blue; text-align: center; height: 70px; padding-top: 5px;">
+	QUẢN LÝ SẢN PHẨM CỦA DANH MỤC
+</div>
+<div class="row" style="background-color: blue; text-align: center;">
+	<div class="col-md-4">Tên Sản Phẩm</div>
+	<div class="col-md-4">Mô Tả Sản phẩm</div>
+	<div class="col-md-2">Tình Trạng</div>
+	<div class="col-md-1">Delete</div>
+</div>
+@foreach (var item in Model)
+{
+<div class="row" id="@item.ProID" style="text-align: center;">
+	<div class="col-md-4">@item.ProName</div>
+	<div class="col-md-4">@item.ProDes</div>
+	<div class="col-md-2">
+		@{ if (item.Status == 1)
+			{
+				<img src="~/Image/icons8-lock-32.png" />;
+			}
+			else
+			{
+				<img src="~/Image/icons8-unlock-32.png" />;
+			}
+		}
+	</div>
+	<div class="col-md-2"><input type="checkbox" class =".btn" data-id="@item.ProID"/></div>
+</div>
+}
+
+

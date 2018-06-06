@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="padding-top: 0; ">
+	<div class="container-fluid">
+		<div class="row" style="background-color: blue; height: 40px;">
+			ĐÊ THI ASP.NET - KHOA CNTT
+		</div>
+		<div class="row" style="background-color: violet; text-align: center; height: 30px;">
+			<div class="col-md-2">Họ và tên</div>
+			<div class="col-md-2">mã số</div>
+			<div class="col-md-2">Lớp</div>
+			<div class="col-md-2">Số Máy</div>
+		</div>
+	</div>
+	<div class="container body-content">
+		@RenderBody()
+	</div>
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+	<script type="text/javascript">
+		
+			$("input[type='checkbox']").click(function () {
+				if ($(this).is(":checked") == true) {
+					var i = $(this).data("id"); 
+					$.post("/Home/Delete", { id: i }, function () {
+							$("#" + i).remove();
+					});
+				}
+			});
+		
+	</script>
+</body>
+</html>
