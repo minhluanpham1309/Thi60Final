@@ -6,8 +6,20 @@
 }
 
 <div class="row" style="background-color: blue; text-align: center; height: 70px; padding-top: 5px;">
-	QUẢN LÝ SẢN PHẨM CỦA DANH MỤC
+	<div class="col-md-9">
+		QUẢN LÝ SẢN PHẨM CỦA DANH MỤC
+	</div>	
+		<div class="dropdown col-md-3 col-md-offset-9">
+			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Chọn Danh mục<span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				@foreach (var i in ViewBag.CatID)
+				{
+					<li><a href=@Url.Action("Detail", "Home", new { id = i.Value})>@i.Text</a></li>
+				}
+			</ul>
+		</div>
 </div>
+
 <div class="row" style="background-color: blue; text-align: center;">
 	<div class="col-md-4">Tên Sản Phẩm</div>
 	<div class="col-md-4">Mô Tả Sản phẩm</div>

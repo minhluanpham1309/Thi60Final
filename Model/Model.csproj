@@ -52,6 +52,7 @@
     <Compile Include="CatDao.cs" />
     <Compile Include="EF\Cat.cs" />
     <Compile Include="EF\Pro.cs" />
+    <Compile Include="EF\ProWithIDCat.cs" />
     <Compile Include="EF\ThiDBContext.cs" />
     <Compile Include="ProDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
